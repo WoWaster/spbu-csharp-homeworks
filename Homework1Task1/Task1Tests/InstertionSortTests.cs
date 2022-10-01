@@ -1,9 +1,9 @@
+namespace Task1Tests;
+
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Task1;
-
-namespace Task1Tests;
 
 public class Tests
 {
@@ -20,7 +20,10 @@ public class Tests
         var amount = rand.Next(10, 100);
 
         var numbersDefaultSort = new List<int>();
-        for (var i = 0; i < amount; i++) numbersDefaultSort.Add(rand.Next(int.MaxValue, int.MaxValue));
+        for (var i = 0; i < amount; i++)
+        {
+            numbersDefaultSort.Add(rand.Next(int.MaxValue, int.MaxValue));
+        }
 
         var numbersInsertionSort = new List<int>(numbersDefaultSort);
 
@@ -37,7 +40,10 @@ public class Tests
         var amount = rand.Next(10, 100);
 
         var numbersDefaultSort = new List<double>();
-        for (var i = 0; i < amount; i++) numbersDefaultSort.Add(rand.NextDouble());
+        for (var i = 0; i < amount; i++)
+        {
+            numbersDefaultSort.Add(rand.NextDouble());
+        }
 
         var numbersInsertionSort = new List<double>(numbersDefaultSort);
 
