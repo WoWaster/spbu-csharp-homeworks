@@ -6,6 +6,15 @@ using Task2;
 
 public class BwtTests
 {
+    private static object[] _shortStrings =
+    {
+        new object[] { "l#p%dMvt0EugX2H@U12jaz@$", "l@ptUX1zH02d@gj%u2$#vEMa" },
+        new object[] { "catanddoglovethefrog", "tcgndhveootgardlfaeo" },
+        new object[] { "5884654654132123633", "2431163255866334485" },
+        new object[] { "Old orange otters obey noodles.", "ysdes.rologtlbnOda  on  oeretoe" },
+        new object[] { "31311235435", "31311542533" }
+    };
+
     [SetUp]
     public void Setup()
     {
@@ -17,7 +26,7 @@ public class BwtTests
     {
         var (bwtTextActual, position) = Bwt.ForwardBwt(text);
         Assert.That(bwtTextActual, Is.EqualTo(bwtTextExpected));
-        Assert.That(Bwt.ReverseBwt(bwtTextExpected, position),Is.EqualTo(text));
+        Assert.That(Bwt.ReverseBwt(bwtTextExpected, position), Is.EqualTo(text));
     }
 
     [Test]
@@ -27,15 +36,6 @@ public class BwtTests
         var bwtBigTextExpected = File.ReadAllText("bigTextOutput.txt");
         var (bwtBigText, position) = Bwt.ForwardBwt(bigText);
         Assert.That(bwtBigText, Is.EqualTo(bwtBigTextExpected));
-        Assert.That(Bwt.ReverseBwt(bwtBigText, position),Is.EqualTo(bigText));
+        Assert.That(Bwt.ReverseBwt(bwtBigText, position), Is.EqualTo(bigText));
     }
-
-    private static object[] _shortStrings =
-    {
-        new object[] {"l#p%dMvt0EugX2H@U12jaz@$", "l@ptUX1zH02d@gj%u2$#vEMa"},
-        new object[] {"catanddoglovethefrog", "tcgndhveootgardlfaeo"},
-        new object[] {"5884654654132123633", "2431163255866334485"},
-        new object[] {"Old orange otters obey noodles.", "ysdes.rologtlbnOda  on  oeretoe"},
-        new object[] {"31311235435", "31311542533"}
-    }; 
 }
