@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpServer", "FtpServer\FtpServer.csproj", "{5B32615E-E0B3-47F4-9B4D-02220C1C6355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpClient", "FtpClient\FtpClient.csproj", "{D4B4D38D-36D9-4E23-94D6-613F678E7772}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B32615E-E0B3-47F4-9B4D-02220C1C6355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B32615E-E0B3-47F4-9B4D-02220C1C6355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B32615E-E0B3-47F4-9B4D-02220C1C6355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B32615E-E0B3-47F4-9B4D-02220C1C6355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B4D38D-36D9-4E23-94D6-613F678E7772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B4D38D-36D9-4E23-94D6-613F678E7772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B4D38D-36D9-4E23-94D6-613F678E7772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B4D38D-36D9-4E23-94D6-613F678E7772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
