@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<div>
+    <h1>Добро пожаловать!</h1>
+
+    <p>Выберите действие:</p>
+    <div class="d-grid gap-2 d-md-block">
+        <a class="btn btn-primary" role="button" asp-page="/AddGrades">Выставление оценок</a>
+        <a class="btn btn-primary" role="button" asp-page="/ViewGrades">Просмотр оценок</a>
+    </div>
+</div>

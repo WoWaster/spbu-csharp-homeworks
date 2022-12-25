@@ -1,0 +1,30 @@
+@page
+@model ViewGradesModel
+
+@{
+    ViewData["Title"] = "Просмотр оценок";
+}
+
+<div>
+    <h1>Просмотр оценок</h1>
+
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Имя студента</th>
+            <th scope="col">Название предмета</th>
+            <th scope="col">Оценка</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var grade in Model.StudentGrades)
+        {
+            <tr>
+                <td>@grade.StudentName</td>
+                <td>@grade.CourseName</td>
+                <td>@grade.Grade</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
