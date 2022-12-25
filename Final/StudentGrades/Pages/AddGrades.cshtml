@@ -1,0 +1,38 @@
+@page
+@model AddGradesModel
+
+@{
+    ViewData["Title"] = "Выставление оценок";
+}
+<div>
+    <h1>Выставление оценок</h1>
+    <form method="post">
+        <div class="row g-3">
+            <div class="col-12 col-lg-4">
+                <input type="text" class="form-control" placeholder="Имя студента" asp-for="StudentGrade.StudentName"/>
+                <span asp-validation-for="StudentGrade.StudentName" class="text-danger"></span>
+            </div>
+            <div class="col-12 col-lg-4">
+                <input type="text" class="form-control" placeholder="Название предмета" asp-for="StudentGrade.CourseName"/>
+                <span asp-validation-for="StudentGrade.CourseName" class="text-danger"></span>
+            </div>
+            <div class="col-12 col-lg-4 mb-3">
+                <input type="number" class="form-control" placeholder="Оценка" asp-for="StudentGrade.Grade"/>
+                <span asp-validation-for="StudentGrade.Grade" class="text-danger"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-3">Выставить!</button>
+    </form>
+
+    @if (TempData.ContainsKey("SuccessMessage"))
+    {
+        <div class="border border-success bg-success text-success p-3" style="--bs-bg-opacity: 0.53">@TempData["SuccessMessage"]</div>
+    }
+</div>
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
